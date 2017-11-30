@@ -162,3 +162,7 @@ main {
  display: inline-block;
 }
 
+/* agregando estilos al div de students */
+.divStudents{
+    outline: 1px solid green;
+}

@@ -88,6 +88,7 @@ window.addEventListener('load', function(event) {
     var str = event.target.id.split(',');
     str = data[str[0]][str[1]];
    console.log(str);
+   document.getElementById('students').innerHTML='';
 
     // Cargando las opciones de sprint segun generation 
    for (i = 0; i < str['ratings'].length; i++) {
@@ -98,21 +99,29 @@ window.addEventListener('load', function(event) {
         optionSprint.add(option);
     }
     
-    // creando un div en students
     for (var i = 0; i < str['students'].length; i++) {
-        // agregando nombre
+        // creando un div en students
         newdiv = document.createElement('div');
-        newdiv.innerHTML = str['students'][i]['name'];
+        newdiv.id = 'divStudents';
+        newdiv.classList.add('divStudents');
         document.getElementById('students').appendChild(newdiv);
+        // agregando nombre
+        newdiv1 = document.createElement('div');
+        newdiv1.innerHTML = str['students'][i]['name'];
+        newdiv1.classList.add('name');
+        console.log(document.getElementById('divStudents'));
+        document.getElementById('divStudents').appendChild(newdiv1);
         // agregando imagen
         newimg = document.createElement('img');
         newimg.innerHTML = str['students'][i]['photo'];
         newimg.setAttribute('src', str['students'][i]['photo']);
-        document.getElementById('students').appendChild(newimg);
+        newimg.classList.add('image');
+        document.getElementById('divStudents').appendChild(newimg);
         // agregando active
         newdiv2 = document.createElement('div');
         newdiv2.innerHTML = str['students'][i]['active'];
-        document.getElementById('students').appendChild(newdiv2);
+        newdiv2.classList.add('active');
+        document.getElementById('divStudents').appendChild(newdiv2);
         // agregando sprints
         // agregando promedio de tech
         newdiv3 = document.createElement('div')
@@ -121,15 +130,21 @@ window.addEventListener('load', function(event) {
             var sum =+ str['students'][i]['sprints'][j]['score']['tech'];
         } 
         newdiv3.innerHTML = parseFloat(sum / str['students'][i]['sprints'].length).toFixed(2);
-        document.getElementById('students').appendChild(newdiv3)
+        newdiv3.classList.add('tech');
+        document.getElementById('divStudents').appendChild(newdiv3)
         // Agregando promedio de hse
         newdiv4 = document.createElement('div')
         for (var f = 0; f < str['students'][i]['sprints'].length; f++) {
-            // suma de tech
+            // suma de hse
             var sum = + str['students'][i]['sprints'][f]['score']['hse'];
         }
         newdiv4.innerHTML = parseFloat(sum / str['students'][i]['sprints'].length).toFixed(2);
-        document.getElementById('students').appendChild(newdiv4) 
+        newdiv4.classList.add('hse');
+        document.getElementById('divStudents').appendChild(newdiv4); 
+        // ---
+        
+
+        
     }
   }
 
