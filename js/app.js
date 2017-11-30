@@ -97,6 +97,40 @@ window.addEventListener('load', function(event) {
         option.id = str['ratings'][i]['sprint'] - 1;
         optionSprint.add(option);
     }
+    
+    // creando un div en students
+    for (var i = 0; i < str['students'].length; i++) {
+        // agregando nombre
+        newdiv = document.createElement('div');
+        newdiv.innerHTML = str['students'][i]['name'];
+        document.getElementById('students').appendChild(newdiv);
+        // agregando imagen
+        newimg = document.createElement('img');
+        newimg.innerHTML = str['students'][i]['photo'];
+        newimg.setAttribute('src', str['students'][i]['photo']);
+        document.getElementById('students').appendChild(newimg);
+        // agregando active
+        newdiv2 = document.createElement('div');
+        newdiv2.innerHTML = str['students'][i]['active'];
+        document.getElementById('students').appendChild(newdiv2);
+        // agregando sprints
+        // agregando promedio de tech
+        newdiv3 = document.createElement('div')
+        for (var j = 0; j < str['students'][i]['sprints'].length; j++){
+            // suma de tech
+            var sum =+ str['students'][i]['sprints'][j]['score']['tech'];
+        } 
+        newdiv3.innerHTML = parseFloat(sum / str['students'][i]['sprints'].length).toFixed(2);
+        document.getElementById('students').appendChild(newdiv3)
+        // Agregando promedio de hse
+        newdiv4 = document.createElement('div')
+        for (var f = 0; f < str['students'][i]['sprints'].length; f++) {
+            // suma de tech
+            var sum = + str['students'][i]['sprints'][f]['score']['hse'];
+        }
+        newdiv4.innerHTML = parseFloat(sum / str['students'][i]['sprints'].length).toFixed(2);
+        document.getElementById('students').appendChild(newdiv4) 
+    }
   }
 
   console.log(optionSprint);
@@ -126,15 +160,6 @@ window.addEventListener('load', function(event) {
     divPromoters.innerHTML = 'Promoters ' + promoters + '%';
     divPassive.innerHTML = 'Passive ' + passive + '%';
     divDetractors.innerHTML = 'Detractores ' + detractors + '%';
-
-    
-//     var std = (data['LIM']['2016-2']['students']);
-//     for (var i = 0; i < std.length; i++) {
-//         newdiv = document.createElement('div');
-//         newdiv.innerHTML = std[i];
-//         newdiv.id = std[i];
-//         document.getElementById('students').appendChild(newdiv);
-//     }
   });
 
  

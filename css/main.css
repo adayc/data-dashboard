@@ -145,7 +145,7 @@ main {
     display: block;
 } 
 
-.menuBar ul 'AQP'{
+.menuBar ul{
     padding: 5px;
     outline: 1px solid blue;
 }
