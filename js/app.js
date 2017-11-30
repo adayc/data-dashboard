@@ -58,7 +58,7 @@ window.addEventListener('load', function(event) {
 
   loadTabs()
 
-  // funcionalidades del menu desplegable de las sedes de laboratoria
+// funcionalidades del menu desplegable de las sedes de laboratoria
   var city = Object.keys(data);
   for (var i = 0; i < city.length; i++) {
       newUl = document.createElement('ul');
@@ -88,6 +88,7 @@ window.addEventListener('load', function(event) {
     var str = event.target.id.split(',');
     str = data[str[0]][str[1]];
    console.log(str);
+
     // Cargando las opciones de sprint segun generation 
    for (i = 0; i < str['ratings'].length; i++) {
         var option = document.createElement('option');
@@ -96,10 +97,7 @@ window.addEventListener('load', function(event) {
         option.id = str['ratings'][i]['sprint'] - 1;
         optionSprint.add(option);
     }
-
-
   }
-
 
   console.log(optionSprint);
   // Evento para elegir el Sprint
@@ -128,22 +126,31 @@ window.addEventListener('load', function(event) {
     divPromoters.innerHTML = 'Promoters ' + promoters + '%';
     divPassive.innerHTML = 'Passive ' + passive + '%';
     divDetractors.innerHTML = 'Detractores ' + detractors + '%';
+
+    
+//     var std = (data['LIM']['2016-2']['students']);
+//     for (var i = 0; i < std.length; i++) {
+//         newdiv = document.createElement('div');
+//         newdiv.innerHTML = std[i];
+//         newdiv.id = std[i];
+//         document.getElementById('students').appendChild(newdiv);
+//     }
   });
 
  
-/*
- console.log(data['LIM']['2016-2']['ratings'][0]); // sprint 1 
-  console.log(data['LIM']['2016-2']['ratings'][1]); // sprint 2 
+// /*
+//  console.log(data['LIM']['2016-2']['ratings'][0]); // sprint 1 
+//   console.log(data['LIM']['2016-2']['ratings'][1]); // sprint 2 
   
-console.log(data['LIM']['2016-2']['students']);
-console.log(data['LIM']['2016-2']['students'][0])
-console.log(data['LIM']['2016-2']['students'][0]['name']);
-console.log(data['LIM']['2016-2']['students'][0]['sprints']);
-console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]);
-console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]['number']);
-console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]['score']);
-console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]['score']['tech']);
-console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]['score']['hse']);
+// console.log(data['LIM']['2016-2']['students']);
+// console.log(data['LIM']['2016-2']['students'][0])
+// console.log(data['LIM']['2016-2']['students'][0]['name']);
+// console.log(data['LIM']['2016-2']['students'][0]['sprints']);
+// console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]);
+// console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]['number']);
+// console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]['score']);
+// console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]['score']['tech']);
+// console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]['score']['hse']);
  
   /*
   console.log(data['AQP']);

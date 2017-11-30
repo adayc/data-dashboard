@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -14,13 +14,15 @@
           <img class="imgLaboratoria" src="assets/images/logo-laboratoria.svg" alt="Logo Laboratoria">
        </figure>
       </header>
-    <!-- estructura del navber -->
+    <!-- estructura del nav -->
       <nav class="nav" id="nav">
-        <div>
-        <h1>SANTIAGO DE CHILE  <i class="fa fa-caret-down" aria-hidden="true"></i></h1>
+        <!-- estructura menu desplazable -->
+        <ul class="menu">
+        <li class="menuName"><a href="#"> SEDES<i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+        <div class="menuBar" id="menuBar">
         </div>
-        <div class="menuBar" id="menuBar"> 
-        </div>
+        </ul>
+        <!-- estructura del la lista overview, students y teacher -->
         <div class="listNav" id="listNav">
           <ul>
             <li><button type="button" name="button" data-tab-selector ="tabOverviews" class="tab"> OVERVIEW </button></li>
@@ -30,6 +32,7 @@
         </div>
       </nav>
     </nav>
+    <!-- estructurando el main -->
     <main>
       <div id="options" class="options">
         <select id="sprint" class="sprint">
@@ -59,18 +62,11 @@
       </div>
       <!-- para modificar -->
       </div>
-      <div id="students">
-        <ul>
-          <li>holaaaaa</li>
-          <li>isaaa</li>
-          <li>holaaa</li>
-        </ul>
+      <div id="students" class="students">
+        
       </div>
-      <div id="teachers">
-        <ul>
-          <li>caja 33333</li>
-          <li>caja33333</li>
-        </ul>
+      <div id="teachers" class="teachers">
+        
       </div>
     </main>
 		<!-- Base de datos -->
