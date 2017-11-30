@@ -17,7 +17,7 @@ El siguiente producto final con nombre 'Data Dashboard' que presentaremos a cont
 
 Como primer paso, procedimos a realizar nuestro scketch, en el cual representamos el modelo del producto y se lo presentamos a nuestro cliente, con el que conversamos y nos mencionó las necesidades que presentaba. De esta manera pudimos elegir el modelo mas adecuado, el mismo que mostramos a continuacion.
 
-<center>![imagen][assets/images/scketch.jpg]</center>
+<center>![imagen](assets/images/scketch.jpg)</center>
 
 ## El Desarrollo del Producto Final.
 
