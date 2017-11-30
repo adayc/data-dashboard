@@ -13,12 +13,15 @@ El siguiente producto final con nombre 'Data Dashboard' que presentaremos a cont
 * La puntuación promedio de l@s profesores.
 * La puntuación promedio de l@s jedi masters.
 
-# La Entrevista con Nuestro Cliente
+## La Entrevista con Nuestro Cliente
 
 Como primer paso, procedimos a realizar nuestro scketch, en el cual representamos el modelo del producto y se lo presentamos a nuestro cliente, con el que conversamos y nos mencionó las necesidades que presentaba. De esta manera pudimos elegir el modelo mas adecuado, el mismo que mostramos a continuacion.
 
 <center>![imagen][assets/images/scketch.jpg]</center>
 
+## El Desarrollo del Producto Final.
+
+## El Producto Final
 <!-- * **Track:** _Common Core_
 * **Curso:** _Creando tu primer sitio web interactivo_
 * **Unidad:** _Producto final_
