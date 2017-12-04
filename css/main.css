@@ -24,13 +24,7 @@
  .header{
      width: 100%;
      height: 100px;
-<<<<<<< HEAD
-     outline: 2px solid yellow;
      position: fixed;
-    
-=======
-     position: relative;
->>>>>>> 6af9ca2021f7405d98d79e77b08edc9adea53523
      z-index: 1000;
      line-height: 30px;
  }  
@@ -50,7 +44,6 @@
     top: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
-    outline: solid 2px green;
 }
 
 .header div ul{
@@ -110,7 +103,6 @@
     cursor: pointer;
 }
 
-<<<<<<< HEAD
 main {
     background: #f7f7f7;
     width: 100%;
@@ -129,6 +121,3 @@ main {
 .show{
  display: inline-block;
 }
-=======
-
->>>>>>> 6af9ca2021f7405d98d79e77b08edc9adea53523
